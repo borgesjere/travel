@@ -1,0 +1,89 @@
+
+body{
+	font-family: Calibri;
+	margin: 0px;
+	padding: 0px;
+}
+#menuprincipal nav{
+	width: 100%;
+/*	background-color: #424558;*/
+}
+#menuprincipal nav ul {
+	margin: 0px;
+	padding: 0px;
+}
+#menuprincipal nav ul::after{/*pas trop compris, mais ca evite un hidden*/
+	content: "";
+	display: block;
+	clear: both;
+}
+#menuprincipal nav ul li{
+	float: left;/* avec list style type*/
+	position: relative;
+}
+#menuprincipal nav ul li a {
+	padding: 20px 30px;
+	color:#rfff;
+}
+#menuprincipal nav li{
+	list-style-type: none;/* pas de puce*/
+}
+#menuprincipal .sousmenu{/*ok*/
+	display: none   /*on cache le sous menu en 1er lieux*/
+}
+#menuprincipal nav a{
+	display: inline-block;
+	text-decoration: none;
+}
+#menuprincipal nav input[type=checkbox]{/*pour enlever le menu et la case a cocher*/
+	display: none;/*le nav est peut etre en trop*/
+}
+#menuprincipal nav label{/*pareil pour la cas*/
+	display: none;
+}
+#menuprincipal nav li:hover .sousmenu{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 100000;
+}
+.sousmenu li{
+	/*border-bottom: 1px solid #ccc;*/
+}
+.sousmenu li a{
+	display: block;
+	padding: 15px 30px;
+	font-size: 13px;
+	color: grey;
+	width: 270px;
+}
+#menuprincipal  input[type=checkbox]:checke ~ ul{
+	display: block;
+}
+/*on modifie le style de notre menu pour sonaffichage responsive*/
+@media screen and (max-width : 780px){
+#menuprincipal .menu-mobile{
+	display: block;
+	color: red;
+	background-color: rgba(29,197,151,0.97);
+	text-align: center;
+	padding: 12px 0;
+}
+#menuprincipal nav ul{
+		/*display: none;*/
+	padding: 0 40% 0 40%;
+}
+#menuprincipal nav ul li, #menuprincipal nav ul li a{
+	width: 100%;
+	text-align: center;
+}
+#menuprincipal nav ul li, #menuprincipal nav ul li:hover a{
+	padding: 10px 0px ;
+}
+#menuprincipal nav li:hover .sousmenu{
+	display: block;
+	position: static;
+}
+}

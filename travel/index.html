@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel</title>
+
+<!-- css nivo slider ligne 6 et 10-->
+	<link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+<!-- ;../ est enveler 10-->
+	<link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="style.css" media="screen">
+</head>
+
+<body>
+<div id="page">
+    
+        <nav id="menuhaut">
+            <ul>
+                <li><a href="#">Blog</a></li>
+
+                <li><a href="#">Nous contacter</a></li>
+
+                <li><a href="#">Newsletter</a></li>
+
+                <li><a href="#">Site Mobile</a></li>
+
+                <li class="client" ><a href="#">Espace Client</a></li>
+            </ul>
+        </nav>
+ 
+
+
+	<header id="bandeau" role="banner">
+        <h1><a href="index.html"><img id="logo" src="images-travel/logo-travel.jpg" alt="www.travel.com"></a></h1>
+
+		<div id="menuprincipal" >
+			<nav>
+				<ul>
+					<li><a href="index.html" class="choix">Accueil</a></li>
+					<li><a href="volssejours.html">Vols & séjours</a></li>
+					<li><a href="vols">Vols</a></li>
+					<li><a href="sejour.html">Séjours</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+<main id="contenu">
+	
+
+<div class="slider-wrapper theme-default">
+		<div id="slider" class="nivoSlider">
+			<img src="images-travel/photo1.jpg"
+			title="#htmlcaption" alt="photo1">
+			<img src="images-travel/photo2.jpg" 
+			title="#htmlcaption" alt="photo2">
+			<img src="images-travel/photo3.jpg" 
+			title="#htmlcaption" alt="photo3">
+			<img src="images-travel/photo4.jpg" 
+			 alt="photo4">
+		</div>
+	</div>
+
+	<section id="promo">
+		<article class="blocpromo">
+			<h3>Lune de miel</h3>
+			<img src="images-travel/picto-lune.jpg" alt="">
+			<p>Classiques, quasi légendaires, pour amoureux en quête de romantisme et de valeurs sûres. Le mythe de la lune de miel est né en Polynésie sur pilotis, en Italie en palarri, au Botswana en lodge perché...</p>
+			<a href="#">Lire la suite</a>
+		</article>
+		<article class="blocpromo">
+			<h3>voyage en famille</h3>
+			<img src="images-travel/picto-famille.jpg" alt="">
+			<p>Les vacances en famille: un moment attendu toute l'année!
+			Parce qu'on n'a pas envie de la même chose à 2 ou 12 ans, notre sélection de voyages vise à satisfaire tous les goûts et tous les âges: des chauffe-biberonspour les plus jeunes, des activités encadrées pour les turbulants ou de l'aventure douce pour les intépides...</p>
+			<a href="#">Lire la suite</a>
+		</article>
+		<article class="blocpromo">
+			<h3>croisieres</h3>
+			<img src="images-travel/picto-croisiere.jpg" alt="">
+			<p>Voilier, catamaran, yacht, cargo mixte, dahabiah, brise-glace ou encore express cotier et pourquoi pas petit paquebot _ Tous les bateaux répondant à l'appel du large qu'inévitablement on ressant un jour, que l'on soit contemplatif ou prêt pour la manoeuvre.
+			Larguez les amarres.</p>
+			<a href="#">Lire la suite</a>
+		</article>
+		<article class="blocpromo">
+			<h3>destinations</h3>
+			<img src="images-travel/picto-carte.jpg" alt="">
+			<p>Neiges européennes, plages lointaines: à chacun sa façon de suspendre le temps.... Choisissez votre destination ....</p>
+		</article>
+	</section>
+</main>
+
+
+	<div id="reseau">
+		<p>Nous suivre</p>
+		<img class="sociaux"src="images-travel/facebook.jpg" alt="#">
+		<img class="sociaux"src="images-travel/twitter.jpg" alt="#">
+	</div>
+
+</div>
+<!--<footer >
+    <div id="bandeaubas">
+    <p class="contenupied"> &copy; 2017-Tous droits réservés</p>
+    <p class="pied">Info légales</p>
+</div>-->
+
+
+
+<!-- page de fin-->
+	<footer id="pied"> 
+    <div id="contenupied">
+    <p id="copyright"> &copy; 2017-Tous droits réservés </p>
+    <p id="mention"> Info légales</p>
+</div>
+
+</footer>
+
+
+
+<!--script de nivo slider pris sur la ligne 30 a 36-->
+<script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+<!--on a mit script devant /jquery-->
+ <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+ <script type="text/javascript">
+ $(window).load(function() {
+ $('#slider').nivoSlider({
+ 			controlNav:false
+ 		})
+  });
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+
+#menupersonne, #menupersonne ul {
+list-style: none;/*pas de point devant*/
+}
+/*pour annuler les flottements*/
+#menupersonne:before,
+#menupersonne:after {
+content: "";
+display: table;
+}
+#menupersonne:after {
+clear: both;
+}
+ #menupersonne {
+zoom:1;
+}
+/*Les elements de listes*/
+#menupersonne li {
+float: left;
+border-right: 0px solid #222;
+box-shadow: 0px 0 0 #444;
+position: relative;
+}
+ #menupersonne a {
+float: left;
+padding: 12px 30px;
+color:#ffffff;/* couleur blanche des textes*/
+text-transform: uppercase;
+font: bold 12px Arial, Helvetica;
+text-decoration: none;
+text-shadow: 0 1px 0 #000;
+/*padding: 7px 1% 0 1%;*/
+	border: 1px solid #3c3c3c; 
+	background-color: #cda478;
+	border-radius: 6px;
+	box-shadow: 1px 1px 1px #777;
+}
+ #menupersonne li:hover > a {
+color: #fafafa;/*couleur blanche*/
+}
+*html   #menupersonne li a:hover { /* IE6 only */
+color: #fafafa;/*couleur blanche*/
+}
+/*les sous menus*/
+#menupersonne ul {
+margin: 20px 0 0 0;
+_margin: 0; /*IE6 only*/
+opacity: 0;
+visibility: hidden;
+position: absolute;
+top: 38px;
+left: 0;
+z-index: 9999;/*defini le (z-order, 
+l'ordre des différentes couches que formeront l'élément),
+d'un élément positionné et de ses éléménts fils ou de ses 
+éléments flexibles*/
+background: linear-gradient(#444, #111);
+box-shadow: 0 -1px 0 rgba(255,255,255,.3);
+border-radius: 3px;
+/*apporte un coter transparent */
+transition: all .2s ease-in-out;
+}
+#menupersonne li:hover > ul {
+opacity: 1;
+visibility: visible;
+margin: 0;
+}
+#menupersonne ul ul {
+top: 0;
+left: 150px;
+margin: 0 0 0 20px;
+_margin: 0; /*IE6 only*/
+box-shadow: -1px 0 0 rgba(255,255,255,.3);/*pas de couleur*/
+}
+#menupersonne ul li {
+float: none;
+display: block;
+border: 0;
+_line-height: 0; /*IE6 only*/
+box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+#menupersonne ul li:last-child {
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+#menupersonne ul a {
+padding: 10px;
+width: 130px;
+_height: 10px; /*IE6 only*/
+display: block;
+white-space: nowrap;
+float: none;
+text-transform: none;
+}
+#menupersonne ul a:hover {
+background-color: #c4a177;
+background-image: linear-gradient(#b28e63, #c4a177);
+}
+
+
+/*7*/
+$(function() {
+if ($.browser.msie && $.browser.version.substr(0,1)<7)
+{
+$('li').has('ul').mouseover(function(){
+$(this).children('ul').css('visibility','visible');
+}).mouseout(function(){
+$(this).children('ul').css('visibility','hidden');
+})
+}
+})
+

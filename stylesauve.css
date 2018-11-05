@@ -1,0 +1,523 @@
+*{
+	margin:0px;/* toujours a faire pour prendre la main*/
+	padding: 0px;
+}
+ul{
+	list-style-type: none;/* pas de puce */
+}
+a {
+	text-decoration: none;/* pas de soulignement*/
+}
+body{
+	background-image:url(images-travel/bandeau-haut.jpg);
+	background-repeat: repeat-x;	
+}
+#page {
+	max-width: 1101px;
+	width: 100%;
+	margin:0 auto;	
+}
+#menuhaut {
+	width: 100%;
+}
+#menuhaut ul{
+	display: flex;
+	padding-top: 10px;
+}
+#page #menuhaut ul li{/*nouveau*/
+	padding: 1px 2% 1px 2%;
+	border-right: 2px solid white;
+}
+#page #menuhaut ul li:nth-child(4){
+    border: none;
+}
+#page #menuhaut ul li a{
+    width:100%;
+   color: white;
+}
+#page #menuhaut ul li.client{
+    text-align: right;/*la ligne client a droite*/
+    width:51%;
+    border: none;
+}
+#bandeau{
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+#menuprincipal ul{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 20%;
+	padding-left: 20%;
+}
+/* pour le menu*/
+/*#menuprincipal ul li{/* surtout mettre cette position sur le li
+	pour mettre un sousmenu*/
+	/*position:relative;*/
+}
+#menuprincipal ul li a:hover{
+color: #d5a66f;}
+#menuprincipal ul li a.choix{
+	color:  #d5a66f;
+	border-bottom: 4px dotted black;
+}
+#menuprincipal a{
+		color:black;
+		font-weight: bold;
+}
+/*#menuprincipal nav > ul{
+margin:0px;
+padding:0px;
+}*/
+#menuprincipal nav > ul::after{/*pour menu*/
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+
+#menuprincipal nav a{
+	display: inline-block;
+	text-decoration:none;
+
+}
+#menuprincipal nav li:hover{
+	display: inline-block;
+	position: absolute;
+	top:100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 10000;
+
+}
+#menuprincipal  .sousmenu li{
+	border-bottom: 1px solid #ccc;
+}
+#menuprincipal  .sousmenu li a {
+	padding: 15px 30px;
+	font-size: 13px;
+	color: red;
+	width: 270px;
+
+}
+
+#menuprincipal nav li{
+	float: left;
+	position: relative;
+	/* très important après pour placer les sousmenu*/
+}
+/*#menuprincipal nav li a{
+	padding: 20px 30px;
+
+}*/
+
+#menuprincipal .sousmenu{
+	display: none;/*
+	 pour ne pas voir les sous menu sauf quand on va dessus*/
+}
+
+
+
+/*------------fin menu-----------------*/
+
+
+
+
+/*-----------------*/
+
+#promo{
+	display: flex;
+	justify-content: space-between;
+}
+#promo .blocpromo{
+	width: 23%;/* pour le responsive*/
+	margin: 20px/*haut*/ 15px/*droite*/
+	 30px/*bas*/ 15px/*gauche*/;
+	 }
+#promo .blocpromo img{/*gerer la largeur en % pour le responsive*/
+	 width: 100%;
+}
+#promo .blocpromo h3{
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+#promo .blocpromo p{
+	text-align: justify;
+	padding-bottom: 10px;
+	}
+#promo .blocpromo a{
+	color: #d5a66f;
+}
+#reseau{
+	text-align: right;
+	color: #d5a66f;
+	width: 100%;
+	height: 90%;
+	padding: 0 30% 50px 0;
+}
+#pied{/*mylene*/
+	/*faire un fixed pour le mettre en responsive**/
+	width: 100%;
+	position: fixed;
+	bottom:0;
+    background-image: url(images-travel/bandeau-bas.jpg);
+    background-repeat: repeat-x;
+}
+#contenupied{
+    color: white;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1101px;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+}
+#mention {/*nouveau*/
+	padding-right: 2%;
+}
+#contenupied #mention{
+    text-align: right;/*mylene*/
+}
+/*----------------------
+ ecran dont la taille est situé entre 769 et 1100 pixel------*/
+@media screen and (min-width:769px) and (max-width:1100px){
+body{
+	background-color:blue;
+}
+#promo{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#promo .blocpromo{
+	width: 44%;/* 48 c'etait trop pour les mettre 2 par 2*/
+}
+#reseau{
+	text-align: center;
+}
+/* pour mettre le menu en hauteur----------*/
+#menuprincipal{
+	padding: 0;
+	border-top: 2px dotted white;
+	border-bottom: 2px dotted white;
+}
+#menuprincipal ul{
+	text-align: center;
+	flex-direction: column;
+}
+#menuprincipal ul li{
+	display: block;
+	border: none;
+	line-height: 30px;
+	height: 30px;
+	position: relative;/* pour mettre le sous menu*/
+}
+#menuprincipal ul li:hover{
+	background-color: orange;
+}
+}
+/*-------------fin de menu en hauteur--------------------------*/
+
+/*-------------
+/*ecran dont la taille va jusqu'a 768px*/
+@media screen and (max-width:768px){
+	body{
+		background-color:yellow;
+}
+#promo{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#promo .blocpromo{
+	width: 95%;/* 48 c'etait trop pour les mettre 2 par 2*/}
+}
+#menuhaut ul li:nth-child(-n+4){/*pour enlever une partie du bandeau*/
+	visibility: hidden;
+}
+.slider-wrapper{
+	display: none ;/*pour enlever quelque chose*/
+}
+
+/* pour mettre le menu en hauteur----------*/
+
+/*lire la doc avant
+#menuprincipal{
+	padding: 0;
+	border-top: 2px dotted white;
+	border-bottom: 2px dotted white;
+}
+#menuprincipal ul{
+	text-align: center;
+	flex-direction: column;
+}
+#menuprincipal ul li{
+	display: block;
+	border: none;
+	line-height: 30px;
+	height: 30px;
+	position: relative;/* pour mettre le sous menu
+}
+#menuprincipal ul li:hover{
+	background-color: orange;
+}
+*/
+
+
+
+
+
+/*-------------fin de menu en hauteur--------------------------*/
+
+
+
+#reseau{/*pour aligner les reseaux*/
+	text-align: center;
+}
+#pied{/* encore pour aligner*/
+	text-align: center;
+}
+/*	-------------fin page index-------------*/
+/*--------------- page sejours-------------------*/
+
+#travel{
+	display: flex;
+	justify-content: space-around;
+	margin: 0 -6px;
+}
+#sejours{
+	max-width: 48%;
+}
+#sejours img{
+	max-width: 100%;
+}
+#sejours #pays{/*nouveau */
+	margin-left: 20%;
+}
+#sejours .sejoursfrance{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.sejoursfrance .lieu img{
+	float: right;
+}
+#sejours h3{/*nouveau*/
+	padding-left: 1%;
+	padding-bottom: 50px;
+}
+#sejours .lieu a{/*nouveau*/
+	padding: 10% 0 0 1%;
+	color: #d5a66f;
+}
+#sejours .sejoursetranger{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.sejoursetranger .lieu img{
+	float: right;
+}
+.lieu{
+	border:1px dashed orange;
+	width: 49%;
+	height: 138px;
+	margin: 1px;
+}
+.colonne p{
+	margin:2%;
+}
+/*---------------------fin page sejour------*/
+/*---------------------services-----------------------------*/
+
+#services{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+#possibilite{
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.bloc{
+	height: 160px;
+	min-width: 30%;
+	border: 1px dotted black;
+	margin-bottom: 10px;
+}
+#possibilite img{
+
+	float: right;
+}
+#possibilite h3{
+	font-size: 17px;
+	margin-bottom: 60px;
+	padding:2px 0 0 1%;
+}
+#possibilite a{
+	color: #d5a66f;
+}
+#multimedia{/*cellule de droite*/
+	width: 20%;
+	min-height: 320px;
+	border: 1px dotted black;
+}
+#multimedia .newsletter{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5%;
+}
+#taille{
+	width: 100%;
+}
+#multimedia img{
+	width: 100%;
+}
+a.bouton{
+	color:black;
+	/*background-color: #bcafb0;*/
+	border:1px solid black;
+	border-radius: 1px ;
+/* arrondi des bords ,mais ca marche pas*/
+}
+/*	------------fin services-----------------*/
+/*---------------page contact---------------*/
+
+#formulaire{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;	
+}
+#adresse{
+	width: 40%;
+}
+#adresse h3{
+	color:#d5a66f;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+#notreadresse{
+	font-family: arial;
+	padding-bottom: 20px;
+}
+#carte{
+	box-sizing:border-box;
+	border:2px solid black;
+	margin-right: 85px;
+}
+#contact{
+	width: 60%;
+}
+#contact h3{
+	color:#d5a66f;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+#contenu-formulaire fieldset{
+	width:100%;
+	box-sizing:border-box;
+	border:2px dashed grey;
+	margin:20px 0%;
+	padding: 20px  1%;
+	}
+#contenu-formulaire fieldset legend{
+	color: grey;
+}
+#contenu-formulaire p{
+	margin: 10px 0;
+}
+#contenu-formulaire p label {
+	width: 80px; /*on a calculer*/
+	display: inline-block;/* c'etait en hauteur donc on la mit en bloc*/
+	vertical-align: top;/*pour mettre adresse en haut*/
+}
+#contenu-formulaire #codepostal #ville {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#contenu-formulaire p input {
+	background-color: #c4c3c3;
+	color: black;
+	padding: 5px 2%;
+	font-weight: bold;
+	border:none;
+	border-radius: 15px;
+	margin: 0 5px;/*marge entre*/
+}
+#contenu-formulaire p textarea {
+	background-color: #c4c3c3;
+	color: black;
+	padding: 5px ;
+	font-weight: bold;
+	border:none;
+	border-radius: 15px;
+	margin: 0 5px;/*marge entre*/
+}
+#contenu-formulaire #messages  textarea {
+	background-color: #c4c3c3;/*couleur de fond*/
+	color: black;
+	padding: 5px ;
+	font-weight: bold;
+	border:none;
+	border-radius: 15px;
+	margin: 0 5px;/*marge entre*/
+	display: inline-block;/*message "votre message en haut"*/
+	vertical-align: top;
+}
+#contenu-formulaire p input[type=submit],
+#contenu-formulaire p input[type=reset]{
+	background-color: orange;
+	color: black;
+	padding: 5px 2%;
+	font-weight: bold;
+	border:none;
+	border-radius: 15px;
+	margin: 0 5px;/*marge entre*/
+}
+/*-----------------fin pages contact-----------*/
+		/* ----------------Caption styles ------------*/
+.nivo-caption {
+	position:absolute;
+	left:300px;
+	top:200px;/*bottom:0*/;
+	background:transparent;
+	color:white;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	font-size: 50px;
+	font-family: 'megan_juneregular';
+	padding:5px;
+	margin:0;
+}
+.nivo-caption p .titreslide{
+	font-size: 100px;
+	letter-spacing:10px;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {/*Erreur lors de l'analyse grammaticale. */
+    display:none;
+
+}
+/*-----------------fin captions styles---------*/

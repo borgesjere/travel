@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel</title>
+
+<!-- css nivo slider ligne 6 et 10-->
+	<link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+<!-- ;../ est enveler 10-->
+	<link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+<!--ma feuille de style-->
+    <link rel="stylesheet" href="vol.css" media="screen">
+</head>
+
+<body>
+	<div id="page">
+       
+<!--ca commence ici--
+
+<!---------------haut de page---------------------------------->
+<main id="indexvol">
+	<section id="revervez">
+<h1 id="resevevol"> Réservez votre vol</h1>
+<form  method="post" action="traitement.php"></form>
+
+	<fieldset id="reservedevol">
+		<article class="choixvol">
+	<p id="typedevol">
+		<label for="allerretour">Aller-Retour</label>
+		<input type="radio" name="allerretour"id="allerretour" value="allerretour"> 
+		<label for="allersimple">Aller-Simple</label>
+		<input type="radio" name="allersimple" id="allersimple" value="allersimple">
+		<label for="multi">Multi-Destination</label>
+		<input type="radio" name="multi" id="multi" value="multi">
+	</p>
+</article>
+	
+<article class="choixvol">
+	<p id="volprecision">
+		<label for="deville">De (ville ou Pays)</label>
+		<input type="text" name="deville" id="deville" value="deville">
+		<label for="aville">A ( Ville ou Pays)</label>
+		<input type="text" name="aville" id="aville" value="aville">
+
+		<label for="dated">Date de départ</label>
+		<input type="date" name="dated" id="dated" value="dated">
+		<label for="dater">Date de retour</label>
+		<input type="date" name="dater" id="dater" value="dater">
+</p>
+</article>
+
+<article class="choixvol">
+	<p>
+		<input type="number" name="ageadule" id="ageadule" min="12" max="120">
+		<label for="ageadule">+ de 12 ans</label>
+		<img src="" alt="">
+		<input type="number" name="ado" id="ado" min="2" max="11">
+		<label for="ado">2-11 ans</label>
+		<img src="" alt="">
+		<input type="number" name="bebe" id="bebe" min="0" max="2">
+		<label for="bebe">0-2 ans</label>
+		<img src="" alt="">
+</p>
+</article>
+
+<article class="choixvol">
+	<p>
+		<input type="checkbox" name="voldirect" value="voldirect" id="voldirect">
+		<label for="voldirect"> Vols Direct</label>
+		<select name="typepourvol" id="typepourvol">
+			<option value="economique">Economique</option>
+<option value="premiere">Première</option>
+<option value="affaire">Affaire</option>
+<option value="soute">soute</option>
+
+
+		</select>
+</p>
+</article>
+
+<article class="choixvol">
+	<p class="bouton">
+	<input type="submit" value="recherche des vol"/>
+	
+</p>
+	
+</article>
+</fieldset>
+
+<aside id="liste">
+<p>dbgfgrsgergerbergergergregre Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aut veritatis nesciunt officia sed ut doloribus! Quasi nemo quos ducimus, earum facilis suscipit repellat vitae ipsum accusamus, recusandae enim amet.</p>
+</aside>
+
+</section>
+</main>
+<!---------------bas de page---------------------------------->
+
+
+	<div id="reseau">
+		<p>Nous suivre</p>
+		<img class="sociaux"src="images-travel/facebook.jpg" alt="#">
+		<img class="sociaux"src="images-travel/twitter.jpg" alt="#">
+	</div>
+
+</div> <!--  fin de page-->
+
+
+<!-- page de fin-->
+	<footer id="pied"> 
+   	 <div id="contenupied">
+  			<p id="copyright"> &copy; 2017-Tous droits réservés </p>
+   			<p id="mention"> Info légales</p>
+		</div>
+	</footer>
+<!---fin de page----------------------->
+	<!--script de nivo slider pris sur la ligne 30 a 36-->
+<script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+<!--on a mit script devant /jquery-->
+ <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+ <script type="text/javascript">
+ $(window).load(function() {
+ $('#slider').nivoSlider({
+ 			controlNav:false
+ 		})
+  });
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,268 @@
+/*---------------mediaqueries produits--------*/
+
+
+/*ecran dont la taille va jusqu'a 768px*/
+@media screen and (max-width:768px){
+body{
+	/*background-color:yellow;*/
+	}
+
+
+
+
+	/*   partie du 26-10-18     pour mettre menu en mobile----*/
+#menuprincipal ul {
+	display: none;
+}
+
+
+
+
+	/*-----------avant---------------------*/
+#partie{
+	flex-wrap: wrap;
+}
+#partie .lesthe{
+	width: 100%;
+}
+
+#bas .reseaux{
+	width: 100%;
+
+}
+#bas .reseaux ul{
+		justify-content: center;
+		display: none;
+}
+	
+}
+
+
+
+
+
+
+
+}
+/*
+----------blog -------------------*/
+
+
+/*-------------fin blog---------------*/
+/*--------------------page contact----------------*/
+/* de base le texte c'est 16*/
+/*      sur margin et padding il y a 
+des % pour que ca deviennes responsive                      */
+
+
+#contenu-formulaire fieldset{
+	width:100%;
+	box-sizing:border-box;
+	border:2px dashed white;
+	margin:20px 0%;
+	padding: 20px  1%;
+}
+#contenu-formulaire fieldset#coordonnees{
+	/* fieldset et coordonnee doivent etre collé*/
+/*display: -WebKit-flex;
+display: flex;*/
+
+}
+
+#contenu-formulaire #coordonnees .colonne{
+	width: 50%;
+	float: left;/* float pour que ca marche sur chrome*/
+}
+
+#contenu-formulaire fieldset legend{
+	color:white;
+	font-style: italic;
+	font-size: 16px;
+	font-weight: bold;
+}
+#contenu-formulaire p{
+	margin: 10px 0;
+}
+#contenu-formulaire p.bouton{
+	text-align: center;
+}
+
+#contenu-formulaire p label {
+width: 130px;/* on a calculer*/
+display: inline-block;/* c'etait en hauteur donc on la mit en bloc*/
+vertical-align: top;/*pour mettre adresse en haut*/
+}
+
+#contenu-formulaire p label.petit{/*bien mettre label et.petit collé*/
+	width: 70px;
+}
+#contenu-formulaire p textarea#message{
+	width: 70%;
+}
+
+
+#contenu-formulaire p input,#contenu-formulaire p textarea{
+	border:none;
+}
+
+
+
+/*hover survol des formulaires*/
+#contenu-formulaire p input[type=text]:hover,
+#contenu-formulaire p input[type=telephone]:hover,
+#contenu-formulaire p input[type=email]:hover,
+#contenu-formulaire p textarea:hover{
+	background-color: /*#ccc*/ black;
+}
+/* focus*/
+#contenu-formulaire p input[type=text]:hover,
+#contenu-formulaire p input[type=telephone]:hover,
+#contenu-formulaire p input[type=email]:hover,
+#contenu-formulaire p textarea:hover{
+	background-color : pink;
+}
+
+#contenu-formulaire p input[type=submit],
+#contenu-formulaire p input[type=reset]{
+background-color: red;
+color: white;
+padding: 5px 2%;
+font-weight: bold;
+border:none;
+border-radius: 15px;
+margin: 0 5px;/*marge entre*/
+}
+
+#contenu-formulaire p input[type=submit]:hover,
+#contenu-formulaire p input[type=reset]:hover{
+	background-color:white;
+	color:red;
+}
+
+#noustrouver{
+	
+	box-sizing: border-box;width: 100%;
+	border:2px dashed white;
+	margin: 20px 0%;
+	padding: 20px 1%;
+	min-height: 300px;
+}
+
+#noustrouver #carte{
+	width: 60%;
+float: left;
+}
+#noustrouver #carte iframe{
+	border:1px solid white;
+}
+#noustrouver #notreadresse{
+color:white;
+float: left;
+
+}
+
+/* le box-sizing impact le margin , contour et
+ bordure ne sont plus pris en compte
+*/
+/*ecran dont la taille va jusqu'a 768px*/
+
+
+@media screen and (max-width: 768px){
+#contenu-formulaire #coordonnees .colonne{
+	width: 100%;
+}
+#contenu-formulaire p textarea#message{
+	width: 90%;
+}
+}
+
+
+
+/*---------------mediaqueries--------------*/
+/* ecran dont la taille est situé entre 769 et 992pixel*/
+@media screen and (min-width:769px) and (max-width:992px){
+body{
+	background-color:pink;
+}
+
+
+#promo{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#promo .blocpub{
+	width: 48%;
+}
+#collection{
+	flex-wrap: wrap;
+}
+#collection .gamme{
+	width: 100%;
+}
+#collection .gamme h4{
+	width: 50%;
+}
+
+
+#bas{
+	display: none;
+}
+}
+/*ecran dont la taille va jusqu'a 768px*/
+@media screen and (max-width:768px){
+	body{
+		background-color:yellow;
+}
+#menuprincipal{
+	padding: 0;
+	border-top: 2px dotted white;
+	border-bottom: 2px dotted white;
+}
+#menuprincipal ul{
+	text-align: center;
+	flex-direction: column;
+}
+#menuprincipal ul li{
+	display: block;
+	border: none;
+	line-height: 30px;
+	height: 30px;
+	position: relative;/* pour mettre le sous menu*/
+}
+#menuprincipal ul li:hover{
+	background-color: orange;
+}
+#menuprincipal hr{
+	display:none;
+}
+#promo{
+	flex-wrap: wrap;
+}
+#promo .blocpub{
+	width: 100%;
+}
+#collection,.slider-wrapper,#souslider,.liens{
+	display: none;
+}
+#bas .reseaux{
+	width: 100%;
+}
+#bas .reseaux ul{
+	justify-content: center;
+}
+.menu-mobile{/*----------------26-10-18  pour le mettre en responsive--*/
+	display: block;
+	color: #fff;
+	background-color: red;
+	text-align: center;
+	padding: 12px 0;
+}
+#menuprincipal li:hover .sousmenu{
+display: block;
+position: static;
+}
+}
+
+/*------------sousmenu responsive----*/
+
+
